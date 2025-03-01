@@ -1,5 +1,4 @@
 extends Node
-class_name  AI
 
 signal  request_finished
 @onready var http_request: HTTPRequest = $HTTPRequest
