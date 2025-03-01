@@ -1,7 +1,7 @@
 extends Node2D
 
-var dragging: bool # 拖拽状态
-var v2_mouse: Vector2i # 鼠标的偏差
+var dragging: bool 
+var v2_mouse: Vector2i 
 var show_chat = false
 enum COMMAND {GIFT, SEASON_WINTER,SEASON_SUMMER,SEASON_NORMAL,HELP}
 var command_dict = {"gift": COMMAND.GIFT,
@@ -46,7 +46,7 @@ func _input(event):
 	if event is InputEventMouseMotion and dragging:
 		DisplayServer.window_set_position(DisplayServer.mouse_get_position() - v2_mouse)
 
-	# 右键点击宠物显示对话框（新增检测逻辑）
+	# 右键点击宠物显示对话框
 	if event is InputEventMouseButton:
 		if event.button_index == MOUSE_BUTTON_RIGHT and event.pressed:
 			show_chat = !show_chat
