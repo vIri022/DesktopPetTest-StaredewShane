@@ -1,8 +1,7 @@
-# pet.gd
 extends CharacterBody2D
 
-@export var move_speed: float = 120    # 合理的窗口移动速度
-@export var drag_speed: float = 0.18  # 优化后的拖动平滑系数
+@export var move_speed: float = 120 
+@export var drag_speed: float = 0.18 
 
 var target_window_pos: Vector2 = Vector2.ZERO
 var is_dragging: bool = false
