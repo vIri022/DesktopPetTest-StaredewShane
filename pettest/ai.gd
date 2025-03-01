@@ -19,7 +19,7 @@ func call_aliyun(prompt):
 	var messages = [sys_message]
 	messages.append_array(history.slice(-history_count))
 	# 这里需要填写自己申请好的apikey
-	var api_key = "sk-snfolhupoqhsumbwrqjyuldpfiqutiomninsuatxmmidabqq"
+	var api_key = "sk-apikey"
 	var header = ["Authorization: Bearer " + api_key, "Content-Type: application/json"]
 	var body = JSON.stringify({
 		"model": "Qwen/Qwen2.5-72B-Instruct-128K",
